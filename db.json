@@ -1,4 +1,3 @@
-
 {
   "equipment": [
     {
@@ -7,14 +6,16 @@
       "brand": "Canon",
       "type": "camera",
       "medium": "digital",
-      "category": ["photography", "video"],
+      "category": [
+        "photography",
+        "video"
+      ],
       "amount": 1,
       "purchase_price": 4000,
       "market_price": 0,
       "img_url": "https://static.bhphoto.com/images/images500x500/canon_eos_5d_mark_iv_1561852319_1274705.jpg",
       "serial_number": "",
-      "notes" : ""
-
+      "notes": ""
     },
     {
       "id": "2",
@@ -22,14 +23,16 @@
       "brand": "Sony",
       "type": "camera",
       "medium": "digital",
-      "category": ["photography", "video"],
+      "category": [
+        "photography",
+        "video"
+      ],
       "amount": 1,
       "purchase_price": 2000,
       "market_price": 0,
       "img_url": "https://static.bhphoto.com/images/images500x500/sony_ilce_7m3_alpha_a7_iii_mirrorless_1519677934_1394217.jpg",
       "serial_number": "",
-      "notes" : ""
-
+      "notes": ""
     },
     {
       "id": "3",
@@ -37,14 +40,15 @@
       "brand": "Leica",
       "type": "camera",
       "medium": "analog",
-      "category": ["photography"],
+      "category": [
+        "photography"
+      ],
       "amount": 1,
       "purchase_price": 1600,
       "market_price": 0,
       "img_url": "https://static.bhphoto.com/images/images500x500/leica_10370_m_a_rangefinder_camera_body_1490099761_1082912.jpg",
       "serial_number": "",
-      "notes" : ""
-
+      "notes": ""
     },
     {
       "id": "1",
@@ -52,14 +56,29 @@
       "brand": "Leica",
       "type": "camera",
       "medium": "digital",
-      "category": ["photography"],
+      "category": [
+        "photography"
+      ],
       "amount": 1,
       "purchase_price": 2400,
       "market_price": 0,
       "img_url": "https://static.bhphoto.com/images/images500x500/leica_10770a_m_digital_rangefinder_camera_1408448718_1064509.jpg",
       "serial_number": "",
-      "notes" : ""
-
+      "notes": ""
+    },
+    {
+      "name": "XA-2",
+      "brand": "Olympus",
+      "type": "camera",
+      "medium": "analog",
+      "category": "photo",
+      "amount": "1",
+      "purchasePrice": "125",
+      "marketPrice": "150",
+      "img_url": "https://uniquephoto4.azureedge.net/resources/uniquephoto/images/products/processed/UIGOLFXA2NF.zoom.a.jpg",
+      "serialNumber": "",
+      "notes": "Came with external flash.",
+      "id": "oNU5rcd"
     }
-    ]
+  ]
 }

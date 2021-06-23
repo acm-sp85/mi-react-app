@@ -28,6 +28,12 @@ export default class Form extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
+
+    fetch("http://localhost:5000/equipment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.state),
+    });
   };
   render() {
     const {
