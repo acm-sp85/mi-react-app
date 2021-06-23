@@ -1,8 +1,11 @@
 import React from "react";
+import EqDetails from "../containers/Eq-details";
+import EqAvatar from "../containers/Eq-avatar";
+import Form from "./Form";
 
 class Home extends React.Component {
   state = {
-    posts: [],
+    equipment: [],
   };
 
   componentDidMount() {
@@ -10,26 +13,19 @@ class Home extends React.Component {
       .then((result) => result.json())
       .then((data) =>
         this.setState({
-          posts: data,
+          equipment: data,
         })
       );
   }
 
-  postsToRender = () => {
-    return this.state.posts.map((post) => {
-      return (
-        <div>
-          <h1>
-            {post.name} {post.type} {post.medium} {post.category} {post.amount}
-          </h1>
-          {/* <p>{post.power}</p>
-             <img src={post.url}></img> */}
-        </div>
-      );
-    });
-  };
   render() {
-    return <div>{this.postsToRender()}</div>;
+    return (
+      <div className="home">
+        <EqDetails equipment={this.state.equipment} />
+        <EqAvatar equipment={this.state.equipment} />
+        <Form />
+      </div>
+    );
   }
 }
 

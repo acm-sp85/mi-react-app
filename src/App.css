@@ -1,3 +1,28 @@
 .body {
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(255, 255, 255);
+}
+
+.eq-avatar {
+  max-height: 150px;
+  margin-right: 10px;
+}
+.eq-avatar:hover {
+  transform: scale(1.1);
+  transition: transform 350ms;
+}
+
+.eq-card {
+}
+
+.eq-card-img {
+  max-height: 300px;
+}
+
+.row-of-cards,
+.row-of-avatars {
+  display: flex;
+}
+
+.form {
+  object-fit: contain;
 }
