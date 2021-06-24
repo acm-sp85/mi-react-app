@@ -7,7 +7,7 @@
   margin-right: 10px;
 }
 .eq-avatar:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: transform 350ms;
 }
 
@@ -21,8 +21,14 @@
 .row-of-cards,
 .row-of-avatars {
   display: flex;
+  overflow-x: scroll;
+}
+
+.row-of-cards::-webkit-scrollbar,
+.row-of-avatars::-webkit-scrollbar {
+  display: none;
 }
 
 .form {
-  object-fit: contain;
+  text-align: center;
 }
