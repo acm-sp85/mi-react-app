@@ -14,6 +14,8 @@ export default class FormSubmit extends Component {
     img_url: "",
     serialNumber: "",
     notes: "",
+    favorite: false,
+    wishList: false,
   };
 
   handleChange = (event) => {
@@ -25,16 +27,21 @@ export default class FormSubmit extends Component {
       [name]: value,
     });
   };
+  handleCheckBox = () => {
+    this.state.wishList === false
+      ? this.setState({ wishList: true })
+      : this.setState({ wishList: false });
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
-
     fetch("http://localhost:5000/equipment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state),
-    });
+    })
+      .then((response) => response.json())
+      .then((newEquipment) => this.props.update(newEquipment));
   };
   render() {
     const {
@@ -163,8 +170,16 @@ export default class FormSubmit extends Component {
             />
           </label>
         </Form.Group>
+        <Form.Group>
+          <label>Whislist&nbsp;&nbsp;</label>
+          <input
+            type="checkbox"
+            name="wishList"
+            onChange={this.handleCheckBox}
+          ></input>
+        </Form.Group>
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="ADD" />
       </Form>
     );
   }

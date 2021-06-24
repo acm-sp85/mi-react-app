@@ -4,7 +4,7 @@ function EqDetails(props) {
   const items = props.equipment.map((post) => {
     return (
       <div key={post.id} className="eq-card">
-        <img src={post.img_url} className="eq-card-img"></img>
+        <img src={post.img_url} className="eq-card-img" id={post.id}></img>
         <h1>
           {post.brand}-{post.name}
         </h1>

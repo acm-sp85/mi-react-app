@@ -6,7 +6,10 @@
       "brand": "Canon",
       "type": "camera",
       "medium": "digital",
-      "category": ["photography","video"],
+      "category": [
+        "photography",
+        "video"
+      ],
       "amount": 1,
       "purchasePrice": 4000,
       "marketPrice": 0,
@@ -20,7 +23,10 @@
       "brand": "Sony",
       "type": "camera",
       "medium": "digital",
-      "category": ["photography","video"],
+      "category": [
+        "photography",
+        "video"
+      ],
       "amount": 1,
       "purchasePrice": 2000,
       "marketPrice": 0,
@@ -34,7 +40,9 @@
       "brand": "Leica",
       "type": "camera",
       "medium": "analog",
-      "category": ["photography"],
+      "category": [
+        "photography"
+      ],
       "amount": 1,
       "purchasePrice": 1600,
       "marketPrice": 0,
@@ -43,12 +51,14 @@
       "notes": ""
     },
     {
-      "id": "1",
+      "id": "4",
       "name": "M240",
       "brand": "Leica",
       "type": "camera",
       "medium": "digital",
-      "category": ["photography"],
+      "category": [
+        "photography"
+      ],
       "amount": 1,
       "purchasePrice": 2400,
       "marketPrice": 0,
@@ -69,6 +79,54 @@
       "serialNumber": "",
       "notes": "Came with external flash.",
       "id": "oNU5rcd"
+    },
+    {
+      "name": "EOS-3",
+      "brand": "Canon",
+      "type": "camera",
+      "medium": "analog",
+      "category": "photography",
+      "amount": "1",
+      "purchasePrice": "125",
+      "marketPrice": "450",
+      "img_url": "https://www.keh.com/media/catalog/product/cache/2ebdbedaccdf4a424bbc6b73229cdac6/2/1/212066-2733221_01.jpg",
+      "serialNumber": "",
+      "notes": "Bought at The ICP. Body has heavy signs of use.",
+      "favorite": false,
+      "wishList": false,
+      "id": "ISUknUn"
+    },
+    {
+      "name": "Planar 50mm f/2.0",
+      "brand": "Zeiss",
+      "type": "lens",
+      "medium": "",
+      "category": "photography",
+      "amount": "1",
+      "purchasePrice": "500",
+      "marketPrice": "900",
+      "img_url": "https://www.adorama.com/images/Large/zi502pb.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "qvc7Eqy"
+    },
+    {
+      "name": "Biogon 35 f/2.0",
+      "brand": "Zeiss",
+      "type": "lens",
+      "medium": "analog",
+      "category": "photography",
+      "amount": "1",
+      "purchasePrice": 0,
+      "marketPrice": "1141",
+      "img_url": "https://www.adorama.com/images/Large/zi352bs.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "EUzY1Cz"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import EqDetails from "../containers/Eq-details";
-import EqAvatar from "../containers/Eq-avatar";
+import EqDetails from "./Eq-details";
+import EqAvatar from "./Eq-avatar";
 import Form from "./Form";
 
 class Home extends React.Component {
@@ -18,12 +18,28 @@ class Home extends React.Component {
       );
   }
 
+  handleHover = (event) => {
+    const hoveredItem = this.state.equipment.find(
+      (eq) => eq.id === event.target.id
+    );
+    console.log(hoveredItem);
+  };
+
+  updateStateFromForm = (newEquipment) => {
+    this.setState({
+      equipment: [...this.state.equipment, newEquipment],
+    });
+  };
+
   render() {
     return (
       <div className="home">
         <EqDetails equipment={this.state.equipment} />
-        <EqAvatar equipment={this.state.equipment} />
-        <Form />
+        <EqAvatar
+          equipment={this.state.equipment}
+          handleHover={this.handleHover}
+        />
+        <Form update={this.updateStateFromForm} />
       </div>
     );
   }

@@ -4,7 +4,12 @@ function EqAvatar(props) {
   const avatar = props.equipment.map((post) => {
     return (
       <div key={post.id} className="eq-avatar">
-        <img src={post.img_url} className="eq-avatar"></img>
+        <img
+          src={post.img_url}
+          id={post.id}
+          className="eq-avatar"
+          onMouseEnter={props.handleHover}
+        ></img>
       </div>
     );
   });
