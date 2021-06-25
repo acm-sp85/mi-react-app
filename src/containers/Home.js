@@ -4,6 +4,8 @@ import EqAvatar from "../components/Eq-avatar";
 import RecentItems from "../components/Recent-items";
 import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
+import { Row, Col, Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Home extends React.Component {
   state = {
@@ -67,26 +69,39 @@ class Home extends React.Component {
     return (
       <div className="home">
         {/* <EqDetails equipment={this.state.equipment} /> */}
-        <h1>Cameras</h1>
-        <EqAvatar
-          equipment={this.state.cameras}
-          handleHover={this.handleHover}
-        />
-        <h1>Lenses</h1>
-        <EqAvatar
-          equipment={this.state.lenses}
-          handleHover={this.handleHover}
-        />
-        <h1>Miscellaneous</h1>
-        <EqAvatar equipment={this.state.misc} handleHover={this.handleHover} />
-        <h1>Recently Added</h1>
-        <RecentItems
-          equipment={this.state.recentlyAdded}
-          handleHover={this.handleHover}
-        />
-        <h1>Wishlist</h1>
-        <Wishlist equipment={this.state.wishList} />
-        <Form update={this.updateStateFromForm} />
+        <Container class="container-fluid">
+          <Row>
+            <Col className="col-2">
+              <Form update={this.updateStateFromForm} />
+            </Col>
+            <Col className="col-8">
+              <h3>Cameras</h3>
+              <EqAvatar
+                equipment={this.state.cameras}
+                handleHover={this.handleHover}
+              />
+              <h3>Lenses</h3>
+              <EqAvatar
+                equipment={this.state.lenses}
+                handleHover={this.handleHover}
+              />
+              <h3>Miscellaneous</h3>
+              <EqAvatar
+                equipment={this.state.misc}
+                handleHover={this.handleHover}
+              />
+            </Col>
+            <Col className="col-2">
+              <h5>Recently Added</h5>
+              <RecentItems
+                equipment={this.state.recentlyAdded}
+                handleHover={this.handleHover}
+              />
+              <h5>Wishlist</h5>
+              <Wishlist equipment={this.state.wishList} />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }

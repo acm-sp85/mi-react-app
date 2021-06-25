@@ -1,12 +1,21 @@
 .body {
   background-color: rgb(255, 255, 255);
 }
+.home {
+  margin-top: 75px;
+  width: 100%;
+}
 
 .eq-avatar {
   max-height: 150px;
   margin-right: 10px;
 }
-.eq-avatar:hover {
+.eq-grid {
+  max-height: 500px;
+  margin-right: 10px;
+}
+.eq-avatar:hover,
+.eq-grid:hover {
   transform: scale(1.02);
   transition: transform 350ms;
 }
@@ -16,6 +25,10 @@
 
 .eq-card-img {
   max-height: 300px;
+}
+
+.eq-grid-img {
+  max-height: 75px;
 }
 
 .row-of-cards,
@@ -30,6 +43,7 @@
 }
 
 .form {
-  text-align: center;
-  margin-top: 75px;
+  text-align: left;
+
+  max-width: 200px;
 }
