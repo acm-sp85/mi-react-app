@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Form from "react-bootstrap/Form";
+import { Form, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class FormSubmit extends Component {
   state = {
@@ -60,127 +61,104 @@ export default class FormSubmit extends Component {
     return (
       <Form onSubmit={this.handleSubmit} className="form">
         <Form.Group>
-          <label>
-            Name:
-            <input
-              name="name"
-              type="text"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-
-          <label>
-            Brand:
-            <input
-              name="brand"
-              type="text"
-              value={brand}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Item type:
-            <select name="type" value={type} onChange={this.handleChange}>
-              <option value=""></option>
-              <option value="camera">Camera</option>
-              <option value="lens">Lens</option>
-              <option value="misc">Miscelaneuos</option>
-            </select>
-          </label>
-        </Form.Group>
-        <Form.Group>
-          <label>
-            Analog/Digital:
-            <select name="medium" value={medium} onChange={this.handleChange}>
-              <option value=""></option>
-              <option value="digital">Digital</option>
-              <option value="analog">Analog</option>
-            </select>
-          </label>
-          <label>
-            Category:
-            <select
-              name="category"
-              value={category}
-              onChange={this.handleChange}
-            >
-              <option value=""></option>
-              <option value="photography">Photo</option>
-              <option value="video">Video</option>
-            </select>
-          </label>
-          <label>
-            Amount:
-            <input
-              name="amount"
-              type="number"
-              value={amount}
-              onChange={this.handleChange}
-            />
-          </label>
-        </Form.Group>
-        <Form.Group>
-          <label>
-            Purchase Price:
-            <input
-              name="purchasePrice"
-              type="number"
-              value={purchasePrice}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Market Price:
-            <input
-              name="marketPrice"
-              type="number"
-              value={marketPrice}
-              onChange={this.handleChange}
-            />
-          </label>
-        </Form.Group>
-        <Form.Group>
-          <label>
-            Image link:
-            <input
-              name="img_url"
-              type="text"
-              value={img_url}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Serial Number:
-            <input
-              name="serialNumber"
-              type="text"
-              value={serialNumber}
-              onChange={this.handleChange}
-            />
-          </label>
-        </Form.Group>
-        <Form.Group>
-          <label>
-            Notes:
-            <input
-              name="notes"
-              type="text"
-              value={notes}
-              onChange={this.handleChange}
-            />
-          </label>
-        </Form.Group>
-        <Form.Group>
-          <label>Whislist&nbsp;&nbsp;</label>
-          <input
+          <Form.Label> Name:</Form.Label>
+          <Form.Control
+            name="name"
+            type="text"
+            value={name}
+            onChange={this.handleChange}
+          />
+          <Form.Label> Brand:</Form.Label>
+          <Form.Control
+            name="brand"
+            type="text"
+            value={brand}
+            onChange={this.handleChange}
+          />
+          <Form.Label> Item Type:</Form.Label>
+          <Form.Control
+            as="select"
+            name="type"
+            value={type}
+            onChange={this.handleChange}
+          >
+            <option value=""></option>
+            <option value="camera">Camera</option>
+            <option value="lens">Lens</option>
+            <option value="misc">Miscelaneuos</option>
+          </Form.Control>
+          <Form.Label>Analog/Digital:</Form.Label>
+          <Form.Control
+            as="select"
+            name="medium"
+            value={medium}
+            onChange={this.handleChange}
+          >
+            <option value=""></option>
+            <option value="digital">Digital</option>
+            <option value="analog">Analog</option>
+          </Form.Control>
+          <Form.Label>Category:</Form.Label>
+          <Form.Control
+            as="select"
+            name="category"
+            value={category}
+            onChange={this.handleChange}
+          >
+            <option value=""></option>
+            <option value="photography">Photo</option>
+            <option value="video">Video</option>
+          </Form.Control>
+          <Form.Label> Amount:</Form.Label>
+          <Form.Control
+            name="amount"
+            type="number"
+            value={amount}
+            onChange={this.handleChange}
+          />
+          <Form.Label> Purchase Price:</Form.Label>
+          <Form.Control
+            name="purchasePrice"
+            type="number"
+            value={purchasePrice}
+            onChange={this.handleChange}
+          />
+          <Form.Label> Market Price:</Form.Label>
+          <Form.Control
+            name="marketPrice"
+            type="number"
+            value={marketPrice}
+            onChange={this.handleChange}
+          />
+          <Form.Label> Image Link:</Form.Label>
+          <Form.Control
+            name="img_url"
+            type="text"
+            value={img_url}
+            onChange={this.handleChange}
+          />
+          <Form.Label>Serial Number:</Form.Label>
+          <Form.Control
+            name="serialNumber"
+            type="text"
+            value={serialNumber}
+            onChange={this.handleChange}
+          />
+          <Form.Label>Notes:</Form.Label>
+          <Form.Control
+            name="notes"
+            type="text"
+            value={notes}
+            onChange={this.handleChange}
+          />
+          <Form.Label>Whislist!!</Form.Label>
+          <Form.Check
             type="checkbox"
             name="wishList"
             onChange={this.handleCheckBox}
-          ></input>
+          />
         </Form.Group>
-
-        <input type="submit" value="ADD" />
+        <Button type="submit">ADD</Button>
       </Form>
     );
   }

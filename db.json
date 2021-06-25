@@ -239,6 +239,38 @@
       "favorite": false,
       "wishList": true,
       "id": "MYlHl1r"
+    },
+    {
+      "name": "28mm f/2.8 Elmarit",
+      "brand": "Leica",
+      "type": "lens",
+      "medium": "",
+      "category": "",
+      "amount": 0,
+      "purchasePrice": "800",
+      "marketPrice": "1400",
+      "img_url": "https://i.ebayimg.com/images/g/H9MAAOSw6HdglQRe/s-l1600.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "Dj_PcH8"
+    },
+    {
+      "name": "Podcaster",
+      "brand": "Shure",
+      "type": "misc",
+      "medium": "digital",
+      "category": "video",
+      "amount": 0,
+      "purchasePrice": 0,
+      "marketPrice": "249",
+      "img_url": "https://static.bhphoto.com/images/images500x500/shure_mv7_k_mv7_mic_1603668932_1593379.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": true,
+      "id": "Ao_fcgd"
     }
   ]
 }

@@ -66,7 +66,7 @@ class Home extends React.Component {
 
     return (
       <div className="home">
-        <EqDetails equipment={this.state.equipment} />
+        {/* <EqDetails equipment={this.state.equipment} /> */}
         <h1>Cameras</h1>
         <EqAvatar
           equipment={this.state.cameras}
