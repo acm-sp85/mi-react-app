@@ -1,7 +1,7 @@
 {
   "equipment": [
     {
-      "id": "1",
+      "id": "1dgh6",
       "name": "5D iv",
       "brand": "Canon",
       "type": "camera",
@@ -18,7 +18,7 @@
       "notes": ""
     },
     {
-      "id": "2",
+      "id": "2565h",
       "name": "A7 iii",
       "brand": "Sony",
       "type": "camera",
@@ -35,7 +35,7 @@
       "notes": ""
     },
     {
-      "id": "3",
+      "id": "3rhgy4",
       "name": "m6",
       "brand": "Leica",
       "type": "camera",
@@ -51,7 +51,7 @@
       "notes": ""
     },
     {
-      "id": "4",
+      "id": "4564u567j",
       "name": "M240",
       "brand": "Leica",
       "type": "camera",
@@ -127,6 +127,118 @@
       "favorite": false,
       "wishList": false,
       "id": "EUzY1Cz"
+    },
+    {
+      "name": "Dry Case",
+      "brand": "Ruggard",
+      "type": "misc",
+      "medium": "",
+      "category": "",
+      "amount": "1",
+      "purchasePrice": "100",
+      "marketPrice": "100",
+      "img_url": "https://static.bhphoto.com/images/images500x500/ruggard_pdc24_bb_portable_dry_case_24_1525880192_1377863.jpg",
+      "serialNumber": "",
+      "notes": "I bought it with internal dividers.",
+      "favorite": false,
+      "wishList": false,
+      "id": "zsGRePP"
+    },
+    {
+      "name": "Tripod",
+      "brand": "meFoto",
+      "type": "misc",
+      "medium": "",
+      "category": "",
+      "amount": "1",
+      "purchasePrice": "150",
+      "marketPrice": "125",
+      "img_url": "https://static.bhphoto.com/images/images500x500/mefoto_rtsablk_roadtrip_s_aluminum_travel_1535539612_1431949.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "qgoIAsn"
+    },
+    {
+      "name": "V600",
+      "brand": "Epson",
+      "type": "misc",
+      "medium": "",
+      "category": "",
+      "amount": "1",
+      "purchasePrice": "50",
+      "marketPrice": "225",
+      "img_url": "https://static.bhphoto.com/images/multiple_images/images500x500/1533550530_IMG_1040768.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "A0AXQY0"
+    },
+    {
+      "name": "Bowery",
+      "brand": "ONA",
+      "type": "misc",
+      "medium": "",
+      "category": "",
+      "amount": 0,
+      "purchasePrice": "200",
+      "marketPrice": "189",
+      "img_url": "https://static.bhphoto.com/images/images500x500/ona_ona5_014olv_bowery_camera_bag_olive_1555496426_1474767.jpg",
+      "serialNumber": "",
+      "notes": "It is cute.",
+      "favorite": false,
+      "wishList": false,
+      "id": "ar8aMJ7"
+    },
+    {
+      "name": "50mm f/1.4",
+      "brand": "Canon",
+      "type": "lens",
+      "medium": "",
+      "category": "",
+      "amount": "1",
+      "purchasePrice": "300",
+      "marketPrice": "399",
+      "img_url": "https://static.bhphoto.com/images/images500x500/Canon_2515A003_50mm_f_1_4_USM_Autofocus_1266238928_12140.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "Lm92H4c"
+    },
+    {
+      "name": "100mm macro f/2.8",
+      "brand": "Canon",
+      "type": "lens",
+      "medium": "",
+      "category": "",
+      "amount": "1",
+      "purchasePrice": "250",
+      "marketPrice": "599",
+      "img_url": "https://static.bhphoto.com/images/images500x500/Canon_4657A006_100mm_f_2_8_USM_Macro_1266926529_194451.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "Rg-nq_N"
+    },
+    {
+      "name": "C-Stand",
+      "brand": "Impact",
+      "type": "misc",
+      "medium": "",
+      "category": "",
+      "amount": 0,
+      "purchasePrice": 0,
+      "marketPrice": "109.95",
+      "img_url": "https://static.bhphoto.com/images/images500x500/Impact_CT40M_Turtle_Base_Master_Century_1446031297_371907.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": true,
+      "id": "MYlHl1r"
     }
   ]
 }

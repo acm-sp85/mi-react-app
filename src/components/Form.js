@@ -41,7 +41,7 @@ export default class FormSubmit extends Component {
       body: JSON.stringify(this.state),
     })
       .then((response) => response.json())
-      .then((newEquipment) => this.props.update(newEquipment));
+      .then((newEquipment) => this.props.update(newEquipment, this.state.type));
   };
   render() {
     const {
@@ -85,6 +85,7 @@ export default class FormSubmit extends Component {
               <option value=""></option>
               <option value="camera">Camera</option>
               <option value="lens">Lens</option>
+              <option value="misc">Miscelaneuos</option>
             </select>
           </label>
         </Form.Group>
