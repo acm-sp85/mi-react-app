@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
 import Budget from "./components/Budget";
 import Navigation from "./components/Navigation";
+import AllEquipmentContainer from "./containers/AllEquipmentContainer";
 
 function App() {
   return (
@@ -14,6 +15,11 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/budget" exact component={Budget} />
+          <Route
+            path="/all-equipment"
+            exact
+            component={AllEquipmentContainer}
+          />
         </Switch>
       </Router>
     </div>

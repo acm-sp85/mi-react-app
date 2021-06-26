@@ -1,12 +1,11 @@
 import React from "react";
-import EqDetails from "../components/Eqdetails";
 import EqAvatar from "../components/Eq-avatar";
 import RecentItems from "../components/Recent-items";
 import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
-import Navigation from "../components/Navigation";
 import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import EqDetails from "../components/Eqdetails";
 
 class Home extends React.Component {
   state = {
@@ -16,6 +15,7 @@ class Home extends React.Component {
     misc: [],
     recentlyAdded: [],
     wishList: [],
+    clickedItem: [],
   };
 
   componentDidMount() {
@@ -58,10 +58,12 @@ class Home extends React.Component {
   };
 
   handleClick = (event) => {
-    const hoveredItem = this.state.equipment.find(
+    const NewClickedItem = this.state.equipment.find(
       (eq) => eq.id === event.target.id
     );
-    console.log(hoveredItem);
+    NewClickedItem === this.state.clickedItem
+      ? this.setState({ clickedItem: [] })
+      : this.setState({ clickedItem: NewClickedItem });
   };
 
   updateStateFromForm = (newEquipment, type) => {
@@ -90,7 +92,6 @@ class Home extends React.Component {
 
     return (
       <div className="home">
-        {/* <EqDetails equipment={this.state.equipment} /> */}
         <Container className="container-fluid" className="corpus">
           <Row>
             <Col className="col-2">
@@ -103,6 +104,9 @@ class Home extends React.Component {
                 handleHover={this.handleHover}
                 handleClick={this.handleClick}
               />
+              {this.state.clickedItem === [] ? null : (
+                <EqDetails equipment={this.state.clickedItem} />
+              )}
               <h3>Lenses</h3>
               <EqAvatar
                 equipment={this.state.lenses}
