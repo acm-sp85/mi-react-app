@@ -1,10 +1,11 @@
 import React from "react";
-import EqDetails from "../components/Eq-details";
+import EqDetails from "../components/Eqdetails";
 import EqAvatar from "../components/Eq-avatar";
 import RecentItems from "../components/Recent-items";
 import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
-import { Row, Col, Container, Navbar } from "react-bootstrap";
+import Navigation from "../components/Navigation";
+import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Home extends React.Component {
@@ -90,8 +91,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         {/* <EqDetails equipment={this.state.equipment} /> */}
-        <Container className="container-fluid">
-          <Navbar expand="lg" className="navbar"></Navbar>
+        <Container className="container-fluid" className="corpus">
           <Row>
             <Col className="col-2">
               <Form update={this.updateStateFromForm} />
