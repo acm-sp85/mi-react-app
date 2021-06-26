@@ -9,12 +9,13 @@ function RecentItems(props) {
           id={post.id}
           className="eq-grid-img"
           onMouseEnter={props.handleHover}
+          onClick={props.handleClick}
         ></img>
       </div>
     );
   });
 
-  return <div className="column-of-avatars">{avatar}</div>;
+  return <div>{avatar}</div>;
 }
 
 export default RecentItems;

@@ -98,12 +98,12 @@ class Home extends React.Component {
               <Form update={this.updateStateFromForm} />
             </Col>
             <Col className="col-8">
-              <Row className="banner-info">
+              <Row id="banner-info">
                 {this.state.clickedItem === [] ? null : (
                   <EqDetails equipment={this.state.clickedItem} />
                 )}
               </Row>
-              <Row className="rows-display">
+              <Row id="rows-display" className="components">
                 <h3>Cameras</h3>
                 <EqAvatar
                   equipment={this.state.cameras}
@@ -131,9 +131,11 @@ class Home extends React.Component {
                 handleHover={this.handleHover}
                 handleClick={this.handleClick}
               />
+
               <h5>Wishlist</h5>
               <Wishlist
                 equipment={this.state.wishList}
+                handleClick={this.handleClick}
                 handleClick={this.handleClick}
               />
             </Col>
