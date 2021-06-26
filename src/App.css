@@ -1,18 +1,23 @@
 .body {
   background-color: rgb(255, 255, 255);
 }
+
 .home {
   margin-top: 75px;
   width: 100%;
 }
 
-.eq-avatar {
-  max-height: 150px;
-  margin-right: 10px;
+.navbar {
+  height: 30px;
+  background-color: rgb(179, 179, 179);
+  border-radius: 3px;
 }
-.eq-grid {
+
+.column-of-avatars {
   max-height: 500px;
   margin-right: 10px;
+  border-style: inset;
+  border: black;
 }
 .eq-avatar:hover,
 .eq-grid:hover {
@@ -20,6 +25,10 @@
   transition: transform 350ms;
 }
 
+.eq-avatar {
+  max-height: 125px;
+  margin-right: 10px;
+}
 .eq-card {
 }
 
@@ -31,10 +40,15 @@
   max-height: 75px;
 }
 
+.eq-grid {
+  text-align: center;
+}
+
 .row-of-cards,
 .row-of-avatars {
   display: flex;
   overflow-x: scroll;
+  padding: 15px;
 }
 
 .row-of-cards::-webkit-scrollbar,
@@ -44,6 +58,5 @@
 
 .form {
   text-align: left;
-
   max-width: 200px;
 }

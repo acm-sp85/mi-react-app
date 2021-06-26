@@ -67,6 +67,7 @@ export default class FormSubmit extends Component {
             type="text"
             value={name}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label> Brand:</Form.Label>
           <Form.Control
@@ -74,6 +75,7 @@ export default class FormSubmit extends Component {
             type="text"
             value={brand}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label> Item Type:</Form.Label>
           <Form.Control
@@ -81,6 +83,7 @@ export default class FormSubmit extends Component {
             name="type"
             value={type}
             onChange={this.handleChange}
+            size="sm"
           >
             <option value=""></option>
             <option value="camera">Camera</option>
@@ -93,6 +96,7 @@ export default class FormSubmit extends Component {
             name="medium"
             value={medium}
             onChange={this.handleChange}
+            size="sm"
           >
             <option value=""></option>
             <option value="digital">Digital</option>
@@ -104,6 +108,7 @@ export default class FormSubmit extends Component {
             name="category"
             value={category}
             onChange={this.handleChange}
+            size="sm"
           >
             <option value=""></option>
             <option value="photography">Photo</option>
@@ -115,6 +120,7 @@ export default class FormSubmit extends Component {
             type="number"
             value={amount}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label> Purchase Price:</Form.Label>
           <Form.Control
@@ -122,6 +128,7 @@ export default class FormSubmit extends Component {
             type="number"
             value={purchasePrice}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label> Market Price:</Form.Label>
           <Form.Control
@@ -129,6 +136,7 @@ export default class FormSubmit extends Component {
             type="number"
             value={marketPrice}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label> Image Link:</Form.Label>
           <Form.Control
@@ -136,6 +144,7 @@ export default class FormSubmit extends Component {
             type="text"
             value={img_url}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label>Serial Number:</Form.Label>
           <Form.Control
@@ -143,6 +152,7 @@ export default class FormSubmit extends Component {
             type="text"
             value={serialNumber}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label>Notes:</Form.Label>
           <Form.Control
@@ -150,12 +160,14 @@ export default class FormSubmit extends Component {
             type="text"
             value={notes}
             onChange={this.handleChange}
+            size="sm"
           />
           <Form.Label>Whislist!!</Form.Label>
           <Form.Check
             type="checkbox"
             name="wishList"
             onChange={this.handleCheckBox}
+            size="sm"
           />
         </Form.Group>
         <Button type="submit">ADD</Button>

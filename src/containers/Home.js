@@ -4,7 +4,7 @@ import EqAvatar from "../components/Eq-avatar";
 import RecentItems from "../components/Recent-items";
 import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Home extends React.Component {
@@ -56,10 +56,31 @@ class Home extends React.Component {
     console.log(hoveredItem);
   };
 
+  handleClick = (event) => {
+    const hoveredItem = this.state.equipment.find(
+      (eq) => eq.id === event.target.id
+    );
+    console.log(hoveredItem);
+  };
+
   updateStateFromForm = (newEquipment, type) => {
-    this.setState({
-      lenses: [newEquipment, ...this.state.lenses],
-    });
+    switch (type) {
+      case "lens":
+        this.setState({
+          lenses: [newEquipment, ...this.state.lenses],
+        });
+        break;
+      case "camera":
+        this.setState({
+          cameras: [newEquipment, ...this.state.cameras],
+        });
+        break;
+      case "misc":
+        this.setState({
+          misc: [newEquipment, ...this.state.misc],
+        });
+        break;
+    }
   };
 
   render() {
@@ -69,7 +90,8 @@ class Home extends React.Component {
     return (
       <div className="home">
         {/* <EqDetails equipment={this.state.equipment} /> */}
-        <Container class="container-fluid">
+        <Container className="container-fluid">
+          <Navbar expand="lg" className="navbar"></Navbar>
           <Row>
             <Col className="col-2">
               <Form update={this.updateStateFromForm} />
@@ -79,16 +101,19 @@ class Home extends React.Component {
               <EqAvatar
                 equipment={this.state.cameras}
                 handleHover={this.handleHover}
+                handleClick={this.handleClick}
               />
               <h3>Lenses</h3>
               <EqAvatar
                 equipment={this.state.lenses}
                 handleHover={this.handleHover}
+                handleClick={this.handleClick}
               />
               <h3>Miscellaneous</h3>
               <EqAvatar
                 equipment={this.state.misc}
                 handleHover={this.handleHover}
+                handleClick={this.handleClick}
               />
             </Col>
             <Col className="col-2">
@@ -96,9 +121,13 @@ class Home extends React.Component {
               <RecentItems
                 equipment={this.state.recentlyAdded}
                 handleHover={this.handleHover}
+                handleClick={this.handleClick}
               />
               <h5>Wishlist</h5>
-              <Wishlist equipment={this.state.wishList} />
+              <Wishlist
+                equipment={this.state.wishList}
+                handleClick={this.handleClick}
+              />
             </Col>
           </Row>
         </Container>
