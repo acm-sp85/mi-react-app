@@ -29,15 +29,19 @@
   transition: transform 350ms;
 }
 
+.banner-info {
+  height: 150px;
+}
+
 .eq-avatar {
   max-height: 125px;
   margin-right: 10px;
 }
-.eq-card {
+.eq-details {
 }
 
 .eq-card-img {
-  max-height: 300px;
+  max-height: 200px;
 }
 
 .eq-grid-img {
@@ -53,6 +57,9 @@
   display: flex;
   overflow-x: scroll;
   padding: 15px;
+}
+.rows-display {
+  margin-top: 75px;
 }
 
 .row-of-cards::-webkit-scrollbar,

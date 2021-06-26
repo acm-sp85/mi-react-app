@@ -98,27 +98,31 @@ class Home extends React.Component {
               <Form update={this.updateStateFromForm} />
             </Col>
             <Col className="col-8">
-              <h3>Cameras</h3>
-              <EqAvatar
-                equipment={this.state.cameras}
-                handleHover={this.handleHover}
-                handleClick={this.handleClick}
-              />
-              {this.state.clickedItem === [] ? null : (
-                <EqDetails equipment={this.state.clickedItem} />
-              )}
-              <h3>Lenses</h3>
-              <EqAvatar
-                equipment={this.state.lenses}
-                handleHover={this.handleHover}
-                handleClick={this.handleClick}
-              />
-              <h3>Miscellaneous</h3>
-              <EqAvatar
-                equipment={this.state.misc}
-                handleHover={this.handleHover}
-                handleClick={this.handleClick}
-              />
+              <Row className="banner-info">
+                {this.state.clickedItem === [] ? null : (
+                  <EqDetails equipment={this.state.clickedItem} />
+                )}
+              </Row>
+              <Row className="rows-display">
+                <h3>Cameras</h3>
+                <EqAvatar
+                  equipment={this.state.cameras}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+                <h3>Lenses</h3>
+                <EqAvatar
+                  equipment={this.state.lenses}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+                <h3>Miscellaneous</h3>
+                <EqAvatar
+                  equipment={this.state.misc}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Row>
             </Col>
             <Col className="col-2">
               <h5>Recently Added</h5>
