@@ -1,12 +1,13 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import EqGrid from "../components/EqGrid";
+import EqListToUpdate from "../components/EqListToUpdate";
 class UpdateItemContainer extends React.Component {
   state = {
     equipment: [],
     search: "",
     results: [],
+    clickedItem: [],
   };
 
   componentDidMount() {
@@ -17,6 +18,7 @@ class UpdateItemContainer extends React.Component {
           equipment: data,
           search: "",
           results: [],
+          clickedItem: [],
         });
       });
   }
@@ -45,6 +47,20 @@ class UpdateItemContainer extends React.Component {
 
     console.log(foundItems);
   };
+  handleHover = (event) => {
+    const hoveredItem = this.state.equipment.find(
+      (eq) => eq.id === event.target.id
+    );
+    console.log(hoveredItem);
+  };
+  handleClick = (event) => {
+    const NewClickedItem = this.state.equipment.find(
+      (eq) => eq.id === event.target.id
+    );
+    NewClickedItem === this.state.clickedItem
+      ? this.setState({ clickedItem: [] })
+      : this.setState({ clickedItem: NewClickedItem });
+  };
 
   render() {
     return (
@@ -63,7 +79,11 @@ class UpdateItemContainer extends React.Component {
           <Button type="submit">ADD</Button>
         </Form>
         {this.state.results ? (
-          <EqGrid equipment={this.state.results} />
+          <EqListToUpdate
+            equipment={this.state.results}
+            handleClick={this.handleClick}
+            handleHover={this.handleHover}
+          />
         ) : (
           <div></div>
         )}
