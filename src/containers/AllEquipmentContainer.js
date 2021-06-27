@@ -1,5 +1,7 @@
 import React from "react";
-import Eqdetails from "../components/Eqdetails.js";
+import EqGrid from "../components/EqGrid";
+import { Form, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class AllEquipmentContainer extends React.Component {
   state = {
@@ -46,7 +48,24 @@ class AllEquipmentContainer extends React.Component {
   render() {
     return (
       <div>
-        <Eqdetails equipment={this.state.equipment} />
+        <Form onSubmit={this.handleSubmit} className="form">
+          <Form.Label>Category:</Form.Label>
+          <Form.Control
+            as="select"
+            name="category"
+            // value={category}
+            // onChange={this.handleChange}
+            size="sm"
+          >
+            <option value=""></option>
+            <option value="camera">camera</option>
+            <option value="lens">lens</option>
+            <option value="misc">misc</option>
+          </Form.Control>
+
+          <Button type="submit">ADD</Button>
+        </Form>
+        <EqGrid className="" equipment={this.state.equipment} />
       </div>
     );
   }

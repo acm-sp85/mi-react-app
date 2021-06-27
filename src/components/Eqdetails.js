@@ -14,10 +14,9 @@ function EqDetails(props) {
           <h2>
             {item.brand}-{item.name}
           </h2>
-          <h3>{item.medium}</h3>
-          <p>{item.type} </p>
-          <p>{item.category} </p>
-          <p># of items: {item.amount}</p>
+          <p>Type: {item.type} </p>
+          <p>Purchase Price: ${item.purchasePrice}</p>
+          <p>Current Price: ${item.marketPrice}</p>
         </Col>
       </Row>
     </Container>

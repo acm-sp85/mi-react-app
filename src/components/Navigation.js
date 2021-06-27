@@ -10,9 +10,6 @@ function Navigation() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link href="cameras">All Cameras</Nav.Link>
-            <Nav.Link href="lenses">All Lenses</Nav.Link>
-            <Nav.Link href="misc">All Misc</Nav.Link>
             <Nav.Link href="all-equipment">All Equipment</Nav.Link>
             <Nav.Link href="budget">Budget Overview</Nav.Link>
             <Nav.Link href="update">Update Item</Nav.Link>
