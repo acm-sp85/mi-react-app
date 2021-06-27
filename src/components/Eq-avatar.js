@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function EqAvatar(props) {
   const avatar = props.equipment.map((post) => {
     return (
-      <Container>
+      <Container key={post.id}>
         <div key={post.id} className="eq-avatar">
           <img
             src={post.img_url}

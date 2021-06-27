@@ -11,6 +11,7 @@ class AllEquipmentContainer extends React.Component {
     misc: [],
     recentlyAdded: [],
     wishList: [],
+    filtered: [],
   };
 
   componentDidMount() {
@@ -41,31 +42,51 @@ class AllEquipmentContainer extends React.Component {
           misc: misc,
           recentlyAdded: recentlyAdded,
           wishList: wishList,
+          filtered: data,
         });
       });
   }
 
+  handleChange = (event) => {
+    event.preventDefault();
+    if (event.target.value === "cameras") {
+      this.setState({
+        filtered: this.state.cameras,
+      });
+    } else if (event.target.value === "lenses") {
+      this.setState({
+        filtered: this.state.lenses,
+      });
+    } else if (event.target.value === "misc") {
+      this.setState({
+        filtered: this.state.misc,
+      });
+    } else {
+      this.setState({
+        filtered: this.state.equipment,
+      });
+    }
+  };
+
   render() {
     return (
       <div>
-        <Form onSubmit={this.handleSubmit} className="form">
+        <Form className="form">
           <Form.Label>Category:</Form.Label>
           <Form.Control
             as="select"
-            name="category"
-            // value={category}
-            // onChange={this.handleChange}
+            name="filtered"
+            // value={this.state.filtered}
+            onChange={this.handleChange}
             size="sm"
           >
-            <option value=""></option>
-            <option value="camera">camera</option>
-            <option value="lens">lens</option>
+            <option value="all">all</option>
+            <option value="cameras">camera</option>
+            <option value="lenses">lens</option>
             <option value="misc">misc</option>
           </Form.Control>
-
-          <Button type="submit">ADD</Button>
         </Form>
-        <EqGrid className="" equipment={this.state.equipment} />
+        <EqGrid className="" equipment={this.state.filtered} />
       </div>
     );
   }
