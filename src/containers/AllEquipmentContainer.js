@@ -72,7 +72,7 @@ class AllEquipmentContainer extends React.Component {
     return (
       <div>
         <Form className="form">
-          <Form.Label>Category:</Form.Label>
+          <Form.Label>Filter by Category:</Form.Label>
           <Form.Control
             as="select"
             name="filtered"

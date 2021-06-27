@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
+import UpdateItemContainer from "./containers/UpdateItemContainer";
 import Budget from "./components/Budget";
 import Navigation from "./components/Navigation";
 import AllEquipmentContainer from "./containers/AllEquipmentContainer";
@@ -20,6 +21,7 @@ function App() {
             exact
             component={AllEquipmentContainer}
           />
+          <Route path="/update" exact component={UpdateItemContainer} />
         </Switch>
       </Router>
     </div>
