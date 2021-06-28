@@ -1,13 +1,13 @@
 import React from "react";
 import "../EqGrid.css";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqGrid(props) {
   const allEq = props.equipment.map((item) => {
     return (
       <Container key={item.id}>
-        <div key={item.id} className="eq-avatar">
+        <div key={item.id} className="">
           <img
             src={item.img_url}
             className="eq-grid-img"
@@ -19,6 +19,12 @@ function EqGrid(props) {
           <p>
             {item.name}-{item.brand}
           </p>
+          <Button type="submit" onClick={props.handleClickEdit} id={item.id}>
+            EDIT ITEM
+          </Button>
+          <Button type="submit" onClick={props.handleClickDelete} id={item.id}>
+            DELETE ITEM
+          </Button>
         </div>
       </Container>
     );

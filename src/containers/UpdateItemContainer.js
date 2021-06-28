@@ -2,14 +2,12 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EqListToUpdate from "../components/EqListToUpdate";
-import Eqdetails from "../components/Eqdetails";
 import FormToUpdate from "../components/FormToUpdate";
 class UpdateItemContainer extends React.Component {
   state = {
     equipment: [],
     search: "",
     results: [],
-    clickedItem: [],
   };
 
   componentDidMount() {
@@ -20,7 +18,6 @@ class UpdateItemContainer extends React.Component {
           equipment: data,
           search: "",
           results: [],
-          clickedItem: [],
         });
       });
   }
@@ -46,8 +43,6 @@ class UpdateItemContainer extends React.Component {
     this.setState({
       results: foundItems,
     });
-
-    console.log(foundItems);
   };
   handleHover = (event) => {
     const hoveredItem = this.state.equipment.find(
@@ -55,13 +50,29 @@ class UpdateItemContainer extends React.Component {
     );
     console.log(hoveredItem);
   };
-  handleClick = (event) => {
+  handleClickEdit = (event) => {
+    console.log("EDIT " + event.target.id);
     const NewClickedItem = this.state.equipment.find(
       (eq) => eq.id === event.target.id
     );
     NewClickedItem === this.state.clickedItem
       ? this.setState({ clickedItem: [] })
       : this.setState({ clickedItem: NewClickedItem });
+  };
+
+  handleClickDelete = (event) => {
+    event.preventDefault();
+    console.log("trying to DELETE" + event.target.id);
+
+    fetch(`http://localhost:5000/equipment/${event.target.id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.state),
+    })
+      .then((result) => result.json())
+      .then((data) => {
+        this.handleSubmit(event);
+      });
   };
 
   render() {
@@ -80,16 +91,15 @@ class UpdateItemContainer extends React.Component {
           </Form.Group>
           <Button type="submit">ADD</Button>
         </Form>
-        {this.state.results ? (
-          <EqListToUpdate
-            equipment={this.state.results}
-            handleClick={this.handleClick}
-            handleHover={this.handleHover}
-          />
-        ) : (
-          <div></div>
+        <EqListToUpdate
+          equipment={this.state.results}
+          handleClickDelete={this.handleClickDelete}
+          handleClickEdit={this.handleClickEdit}
+        />
+
+        {this.state.clickedItem && (
+          <FormToUpdate equipment={this.state.clickedItem} />
         )}
-        <FormToUpdate equipment={this.state.clickedItem} />
       </div>
     );
   }

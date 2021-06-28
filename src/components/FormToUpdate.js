@@ -3,21 +3,25 @@ import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class FormSubmit extends Component {
-  state = {
-    name: "",
-    brand: "",
-    type: "",
-    medium: "",
-    category: "",
-    amount: 0,
-    purchasePrice: 0,
-    marketPrice: 0,
-    img_url: "",
-    serialNumber: "",
-    notes: "",
-    favorite: false,
-    wishList: false,
-  };
+  state = {};
+  componentDidMount() {
+    console.log("joder");
+    // this.setState({
+    //   name: { name },
+    //   brand: "",
+    //   type: "",
+    //   medium: "",
+    //   category: "",
+    //   amount: 0,
+    //   purchasePrice: 0,
+    //   marketPrice: 0,
+    //   img_url: "",
+    //   serialNumber: "",
+    //   notes: "",
+    //   favorite: false,
+    //   wishList: false,
+    // });
+  }
   handleChange = (event) => {
     event.preventDefault();
     const target = event.target;
@@ -29,18 +33,17 @@ export default class FormSubmit extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("trying to PATCH");
-    // fetch("http://localhost:5000/equipment", {
-    //   method: "PATCH",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(this.state),
-    // })
-    //   .then((response) => response.json())
-    //   .then((newEquipment) => this.props.update(newEquipment, this.state.type));
+    console.log("trying to PUT");
+    console.log(this.state);
+    let id = this.state;
+    fetch(`http://localhost:5000/equipment/${this.state.id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.state),
+    });
   };
 
   render() {
-    console.log(this.props);
     const {
       name,
       brand,
@@ -53,7 +56,7 @@ export default class FormSubmit extends Component {
       img_url,
       serialNumber,
       notes,
-    } = this.props.equipment;
+    } = this.state;
     return (
       <Form onSubmit={this.handleSubmit} className="form">
         <Form.Group>
