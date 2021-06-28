@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
 import UpdateItemContainer from "./containers/UpdateItemContainer";
-import Budget from "./components/Budget";
+import BudgetContainer from "./containers/BudgetContainer";
 import Navigation from "./components/Navigation";
 import AllEquipmentContainer from "./containers/AllEquipmentContainer";
 
@@ -15,7 +15,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/budget" exact component={Budget} />
+          <Route path="/budget" exact component={BudgetContainer} />
           <Route
             path="/all-equipment"
             exact
