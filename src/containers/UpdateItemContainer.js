@@ -2,6 +2,8 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EqListToUpdate from "../components/EqListToUpdate";
+import Eqdetails from "../components/Eqdetails";
+import FormToUpdate from "../components/FormToUpdate";
 class UpdateItemContainer extends React.Component {
   state = {
     equipment: [],
@@ -87,6 +89,7 @@ class UpdateItemContainer extends React.Component {
         ) : (
           <div></div>
         )}
+        <FormToUpdate equipment={this.state.clickedItem} />
       </div>
     );
   }
