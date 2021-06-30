@@ -6,12 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function EqGrid(props) {
   const allEq = props.equipment.map((item) => {
     return (
-      <Container key={item.id} className="eq-grid">
-        <img src={item.img_url} className="eq-grid-img"></img>
-      </Container>
+      <Col key={item.id} className="col-md-4">
+        <img src={item.img_url} className="img-medium"></img>
+      </Col>
     );
   });
-  return <div className="eq">{allEq}</div>;
+  return <Row className="img-medium">{allEq}</Row>;
 }
 
 export default EqGrid;

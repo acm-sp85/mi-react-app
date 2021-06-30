@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EqListToUpdate from "../components/EqListToUpdate";
 import FormToUpdate from "../components/FormToUpdate";
@@ -78,28 +78,35 @@ class UpdateItemContainer extends React.Component {
   render() {
     return (
       <div>
-        <Form onSubmit={this.handleSubmit} className="form">
-          <Form.Group>
-            <Form.Label> Search Item to Update:</Form.Label>
-            <Form.Control
-              name="name"
-              type="text"
-              value={this.state.search}
-              onChange={this.handleChange}
-              size="sm"
+        <Row>
+          <Col>
+            <Form onSubmit={this.handleSubmit} className="form">
+              <Form.Group>
+                <Form.Label> Search Item to Update:</Form.Label>
+                <Form.Control
+                  name="name"
+                  type="text"
+                  value={this.state.search}
+                  onChange={this.handleChange}
+                  size="sm"
+                />
+              </Form.Group>
+              <Button type="submit">ADD</Button>
+            </Form>
+          </Col>
+          <Col>
+            <EqListToUpdate
+              equipment={this.state.results}
+              handleClickDelete={this.handleClickDelete}
+              handleClickEdit={this.handleClickEdit}
             />
-          </Form.Group>
-          <Button type="submit">ADD</Button>
-        </Form>
-        <EqListToUpdate
-          equipment={this.state.results}
-          handleClickDelete={this.handleClickDelete}
-          handleClickEdit={this.handleClickEdit}
-        />
-
-        {this.state.clickedItem && (
-          <FormToUpdate equipment={this.state.clickedItem} />
-        )}
+          </Col>
+          <Col>
+            {this.state.clickedItem && (
+              <FormToUpdate equipment={this.state.clickedItem} />
+            )}
+          </Col>
+        </Row>
       </div>
     );
   }

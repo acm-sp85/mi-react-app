@@ -104,24 +104,30 @@ class Home extends React.Component {
                 )}
               </Row>
               <Row id="rows-display" className="components">
-                <h3>Cameras</h3>
-                <EqAvatar
-                  equipment={this.state.cameras}
-                  handleHover={this.handleHover}
-                  handleClick={this.handleClick}
-                />
-                <h3>Lenses</h3>
-                <EqAvatar
-                  equipment={this.state.lenses}
-                  handleHover={this.handleHover}
-                  handleClick={this.handleClick}
-                />
-                <h3>Miscellaneous</h3>
-                <EqAvatar
-                  equipment={this.state.misc}
-                  handleHover={this.handleHover}
-                  handleClick={this.handleClick}
-                />
+                <Col className="col-12">
+                  <h3>Cameras</h3>
+                  <EqAvatar
+                    equipment={this.state.cameras}
+                    handleHover={this.handleHover}
+                    handleClick={this.handleClick}
+                  />
+                </Col>
+                <Col className="col-12">
+                  <h3>Lenses</h3>
+                  <EqAvatar
+                    equipment={this.state.lenses}
+                    handleHover={this.handleHover}
+                    handleClick={this.handleClick}
+                  />
+                </Col>
+                <Col className="col-12">
+                  <h3>Miscellaneous</h3>
+                  <EqAvatar
+                    equipment={this.state.misc}
+                    handleHover={this.handleHover}
+                    handleClick={this.handleClick}
+                  />
+                </Col>
               </Row>
             </Col>
             <Col className="col-2">
