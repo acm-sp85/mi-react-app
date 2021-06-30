@@ -44,12 +44,7 @@ class UpdateItemContainer extends React.Component {
       results: foundItems,
     });
   };
-  handleHover = (event) => {
-    const hoveredItem = this.state.equipment.find(
-      (eq) => eq.id === event.target.id
-    );
-    console.log(hoveredItem);
-  };
+
   handleClickEdit = (event) => {
     console.log("EDIT " + event.target.id);
     const NewClickedItem = this.state.equipment.find(

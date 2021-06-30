@@ -22,7 +22,12 @@ function EqGrid(props) {
           <Button type="submit" onClick={props.handleClickEdit} id={item.id}>
             EDIT ITEM
           </Button>
-          <Button type="submit" onClick={props.handleClickDelete} id={item.id}>
+          <Button
+            type="submit"
+            className="btn btn-danger"
+            onClick={props.handleClickDelete}
+            id={item.id}
+          >
             DELETE ITEM
           </Button>
         </div>

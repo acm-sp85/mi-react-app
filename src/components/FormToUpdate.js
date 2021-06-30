@@ -5,22 +5,36 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default class FormSubmit extends Component {
   state = {};
   componentDidMount() {
-    console.log("joder");
-    // this.setState({
-    //   name: { name },
-    //   brand: "",
-    //   type: "",
-    //   medium: "",
-    //   category: "",
-    //   amount: 0,
-    //   purchasePrice: 0,
-    //   marketPrice: 0,
-    //   img_url: "",
-    //   serialNumber: "",
-    //   notes: "",
-    //   favorite: false,
-    //   wishList: false,
-    // });
+    console.log("trying to PUT");
+    console.log(this.props.equipment.id);
+    const {
+      name,
+      brand,
+      type,
+      medium,
+      category,
+      amount,
+      purchasePrice,
+      marketPrice,
+      img_url,
+      serialNumber,
+      notes,
+    } = this.props.equipment;
+    this.setState({
+      name: name,
+      brand: brand,
+      type: type,
+      medium: medium,
+      category: category,
+      amount: amount,
+      purchasePrice: purchasePrice,
+      marketPrice: marketPrice,
+      img_url: img_url,
+      serialNumber: serialNumber,
+      notes: notes,
+      favorite: false,
+      wishList: false,
+    });
   }
   handleChange = (event) => {
     event.preventDefault();
@@ -33,10 +47,7 @@ export default class FormSubmit extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("trying to PUT");
-    console.log(this.state);
-    let id = this.state;
-    fetch(`http://localhost:5000/equipment/${this.state.id}`, {
+    fetch(`http://localhost:5000/equipment/${this.props.equipment.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state),
