@@ -6,8 +6,36 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function EqGrid(props) {
   const allEq = props.equipment.map((item) => {
     return (
-      <Col key={item.id} className="col-md-4">
-        <img src={item.img_url} className="img-medium"></img>
+      <Col>
+        <Col key={item.id} className="col-md-4">
+          <Row>
+            <img src={item.img_url} className="img-medium"></img>
+          </Row>
+        </Col>
+        <Col>
+          <Row>
+            <h2>
+              {item.brand}-{item.name}
+            </h2>
+          </Row>
+          <Row>
+            <p>{item.type} </p>
+          </Row>
+          <Row>
+            <p>
+              {item.category} / {item.medium}{" "}
+            </p>
+          </Row>
+          <Row>
+            <p>Paid: ${item.purchasePrice}</p>
+          </Row>
+          <Row>
+            <p>Can sell for: ${item.marketPrice}</p>
+          </Row>
+          <Row>
+            <p>Notes : {item.notes}</p>
+          </Row>
+        </Col>
       </Col>
     );
   });

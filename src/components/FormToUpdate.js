@@ -5,8 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default class FormSubmit extends Component {
   state = {};
   componentDidMount() {
-    console.log("trying to PUT");
-    console.log(this.props.equipment.id);
     const {
       name,
       brand,
@@ -19,6 +17,8 @@ export default class FormSubmit extends Component {
       img_url,
       serialNumber,
       notes,
+      favorite,
+      wishList,
     } = this.props.equipment;
     this.setState({
       name: name,
@@ -32,8 +32,8 @@ export default class FormSubmit extends Component {
       img_url: img_url,
       serialNumber: serialNumber,
       notes: notes,
-      favorite: false,
-      wishList: false,
+      favorite: favorite,
+      wishList: wishList,
     });
   }
   handleChange = (event) => {

@@ -6,8 +6,7 @@
       "type": "camera",
       "medium": "digital",
       "category": [
-        "photography",
-        "video"
+        "photography"
       ],
       "amount": 1,
       "purchasePrice": 4000,
@@ -25,7 +24,6 @@
       "type": "camera",
       "medium": "digital",
       "category": [
-        "photography",
         "video"
       ],
       "amount": 1,
@@ -337,6 +335,22 @@
       "favorite": false,
       "wishList": false,
       "id": "cP0oPUR"
+    },
+    {
+      "name": "H4n",
+      "brand": "Zoom",
+      "type": "misc",
+      "medium": "digital",
+      "category": "video",
+      "amount": "1",
+      "purchasePrice": "150",
+      "marketPrice": "100",
+      "img_url": "https://static.bhphoto.com/images/images500x500/Zoom_H4N_H4n_Handy_Mobile_4_Track_1302187553_600761.jpg",
+      "serialNumber": "",
+      "notes": "Gonzalo sold it to me.",
+      "favorite": false,
+      "wishList": false,
+      "id": "7k9MkRz"
     }
   ]
 }

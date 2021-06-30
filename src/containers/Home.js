@@ -5,6 +5,7 @@ import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
 import { Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../App.css";
 import EqDetails from "../components/Eqdetails";
 
 class Home extends React.Component {
@@ -61,9 +62,7 @@ class Home extends React.Component {
     const NewClickedItem = this.state.equipment.find(
       (eq) => eq.id === event.target.id
     );
-    NewClickedItem === this.state.clickedItem
-      ? this.setState({ clickedItem: [] })
-      : this.setState({ clickedItem: NewClickedItem });
+    this.setState({ clickedItem: NewClickedItem });
   };
 
   updateStateFromForm = (newEquipment, type) => {
@@ -86,6 +85,17 @@ class Home extends React.Component {
     }
   };
 
+  landingBanner() {
+    if (this.state.clickedItem.length === 0)
+      return (
+        <img
+          src="https://imgpile.com/images/NxoUB1.jpg"
+          className="img-banner"
+        />
+      );
+    return <EqDetails equipment={this.state.clickedItem} />;
+  }
+
   render() {
     {
     }
@@ -98,11 +108,8 @@ class Home extends React.Component {
               <Form update={this.updateStateFromForm} />
             </Col>
             <Col className="col-8">
-              <Row id="banner-info">
-                {this.state.clickedItem === [] ? null : (
-                  <EqDetails equipment={this.state.clickedItem} />
-                )}
-              </Row>
+              <Col className="col-12">{this.landingBanner()}</Col>
+
               <Row id="rows-display" className="components">
                 <Col className="col-12">
                   <h3>Cameras</h3>

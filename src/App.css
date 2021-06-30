@@ -32,6 +32,9 @@
 #banner-info {
   height: 150px;
 }
+.img-banner {
+  max-height: 225px;
+}
 
 .eq-avatar {
   max-height: 125px;
@@ -70,7 +73,7 @@
 }
 
 #rows-display {
-  margin-top: 75px;
+  /* margin-top: 5px; */
 }
 
 .row-of-cards::-webkit-scrollbar,
