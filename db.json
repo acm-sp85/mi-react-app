@@ -1,6 +1,7 @@
 {
   "equipment": [
 
+
         {
           "id": "1dgh6",
           "name": "5D iv",
@@ -337,91 +338,6 @@
           "wishList": false,
           "id": "cP0oPUR"
         }
-      ],
-      "search": "canon",
-      "results": [
-        {
-          "id": "1dgh6",
-          "name": "5D iv",
-          "brand": "Canon",
-          "type": "camera",
-          "medium": "digital",
-          "category": [
-            "photography",
-            "video"
-          ],
-          "amount": 1,
-          "purchasePrice": 4000,
-          "marketPrice": 0,
-          "img_url": "https://static.bhphoto.com/images/images500x500/canon_eos_5d_mark_iv_1561852319_1274705.jpg",
-          "serial_number": "",
-          "notes": ""
-        },
-        {
-          "name": "EOS-3",
-          "brand": "Canon",
-          "type": "camera",
-          "medium": "analog",
-          "category": "photography",
-          "amount": "1",
-          "purchasePrice": "125",
-          "marketPrice": "450",
-          "img_url": "https://www.keh.com/media/catalog/product/cache/2ebdbedaccdf4a424bbc6b73229cdac6/2/1/212066-2733221_01.jpg",
-          "serialNumber": "",
-          "notes": "Bought at The ICP. Body has heavy signs of use.",
-          "favorite": false,
-          "wishList": false,
-          "id": "ISUknUn"
-        },
-        {
-          "name": "50mm f/1.4",
-          "brand": "Canon",
-          "type": "lens",
-          "medium": "",
-          "category": "",
-          "amount": "1",
-          "purchasePrice": "300",
-          "marketPrice": "399",
-          "img_url": "https://static.bhphoto.com/images/images500x500/Canon_2515A003_50mm_f_1_4_USM_Autofocus_1266238928_12140.jpg",
-          "serialNumber": "",
-          "notes": "",
-          "favorite": false,
-          "wishList": false,
-          "id": "Lm92H4c"
-        },
-        {
-          "name": "100mm macro f/2.8",
-          "brand": "Canon",
-          "type": "lens",
-          "medium": "",
-          "category": "",
-          "amount": "1",
-          "purchasePrice": "250",
-          "marketPrice": "599",
-          "img_url": "https://static.bhphoto.com/images/images500x500/Canon_4657A006_100mm_f_2_8_USM_Macro_1266926529_194451.jpg",
-          "serialNumber": "",
-          "notes": "",
-          "favorite": false,
-          "wishList": false,
-          "id": "Rg-nq_N"
-        },
-        {
-          "name": "Canonet Q17",
-          "brand": "Canon",
-          "type": "camera",
-          "medium": "analog",
-          "category": "photography",
-          "amount": "1",
-          "purchasePrice": "50",
-          "marketPrice": "150",
-          "img_url": "https://i.ebayimg.com/images/g/uEUAAOSwFXlg0vGw/s-l1600.jpg",
-          "serialNumber": "",
-          "notes": "",
-          "favorite": false,
-          "wishList": false,
-          "id": "cP0oPUR"
-        }
       ]
- 
-
-}
+    }
+      
