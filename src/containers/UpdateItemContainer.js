@@ -8,6 +8,7 @@ class UpdateItemContainer extends React.Component {
     equipment: [],
     search: "",
     results: [],
+    clickedItem: null,
   };
 
   componentDidMount() {
@@ -47,18 +48,22 @@ class UpdateItemContainer extends React.Component {
 
   handleClickEdit = (event) => {
     console.log("EDIT " + event.target.id);
-    const NewClickedItem = this.state.equipment.find(
-      (eq) => eq.id === event.target.id
-    );
-    NewClickedItem === this.state.clickedItem
-      ? this.setState({ clickedItem: [] })
-      : this.setState({ clickedItem: NewClickedItem });
+
+    if (
+      !this.state.clickedItem ||
+      event.target.id !== this.state.clickedItem.id
+    ) {
+      const NewClickedItem = this.state.equipment.find(
+        (eq) => eq.id === event.target.id
+      );
+      this.setState({ clickedItem: { ...NewClickedItem } });
+    } else {
+      this.setState({ clickedItem: null });
+    }
   };
 
   handleClickDelete = (event) => {
     event.preventDefault();
-    console.log("trying to DELETE" + event.target.id);
-
     fetch(`http://localhost:5000/equipment/${event.target.id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
@@ -66,11 +71,29 @@ class UpdateItemContainer extends React.Component {
     })
       .then((result) => result.json())
       .then((data) => {
-        this.handleSubmit(event);
+        // this.handleSubmit(event);
+        let whatToDelete = this.state.results;
+
+        console.log(whatToDelete);
+        let alreadyDeleted = whatToDelete.filter(
+          (item) => item.id !== event.target.id
+        );
+        let updatedEqList = this.state.equipment.filter(
+          (item) => item.id !== event.target.id
+        );
+        console.log(alreadyDeleted);
+        this.setState({
+          results: alreadyDeleted,
+          equipment: updatedEqList,
+        });
+
+        /*this.setState({
+          results:  results - deleted one */
       });
   };
 
   render() {
+    console.log("rendering");
     return (
       <Container>
         <Row>

@@ -34,6 +34,7 @@
       "notes": ""
     },
     {
+      "id": "3rhgy4",
       "name": "m6",
       "brand": "Leica",
       "type": "camera",
@@ -43,10 +44,10 @@
       ],
       "amount": 1,
       "purchasePrice": 1600,
-      "marketPrice": "2000",
+      "marketPrice": 0,
       "img_url": "https://static.bhphoto.com/images/images500x500/leica_10370_m_a_rangefinder_camera_body_1490099761_1082912.jpg",
-      "notes": "",
-      "id": "3rhgy4"
+      "serial_number": "",
+      "notes": ""
     },
     {
       "name": "M240",
@@ -350,22 +351,6 @@
       "favorite": false,
       "wishList": false,
       "id": "7k9MkRz"
-    },
-    {
-      "name": "EW G3",
-      "brand": "Sennheiser",
-      "type": "misc",
-      "medium": "digital",
-      "category": "video",
-      "amount": "1",
-      "purchasePrice": "600",
-      "marketPrice": "200",
-      "img_url": "https://static.bhphoto.com/images/images500x500/sennheiser_ew_112p_g4_a_ew_112p_g4_camera_1552309826_1385595.jpg",
-      "serialNumber": "",
-      "notes": "",
-      "favorite": false,
-      "wishList": false,
-      "id": "9rGHMFk"
     }
   ]
 }

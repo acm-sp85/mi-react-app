@@ -2,7 +2,21 @@ import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 
 export default class FormSubmit extends Component {
-  state = {};
+  state = {
+    name: "",
+    brand: "",
+    type: "",
+    medium: "",
+    category: "",
+    amount: 0,
+    purchasePrice: 0,
+    marketPrice: 0,
+    img_url: "",
+    serialNumber: "",
+    notes: "",
+    favorite: false,
+    wishList: false,
+  };
   componentDidMount() {
     this.mountingComponent();
   }

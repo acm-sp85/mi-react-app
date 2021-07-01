@@ -4,7 +4,6 @@ import RecentItems from "../components/Recent-items";
 import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
 import { Row, Col, Container } from "react-bootstrap";
-
 import "../App.css";
 import EqDetails from "../components/Eqdetails";
 
@@ -68,6 +67,7 @@ class Home extends React.Component {
   updateStateFromForm = (newEquipment, type) => {
     switch (type) {
       case "lens":
+        console.log(newEquipment.id);
         this.setState({
           lenses: [newEquipment, ...this.state.lenses],
         });
@@ -101,58 +101,56 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="home">
-        <Container className="container-fluid">
-          <Row>
-            <Col className="col-2">
-              <Form update={this.updateStateFromForm} />
-            </Col>
-            <Col className="col-8">
-              <Row className="col-12">{this.landingBanner()}</Row>
+      <Container className="container-fluid">
+        <Row>
+          <Col className="col-2">
+            <Form update={this.updateStateFromForm} />
+          </Col>
+          <Col className="col-8">
+            <Row className="col-12">{this.landingBanner()}</Row>
 
-              <Row id="rows-display" className="components">
-                <Col className="col-12">
-                  <h3>Cameras</h3>
-                  <EqAvatar
-                    equipment={this.state.cameras}
-                    handleHover={this.handleHover}
-                    handleClick={this.handleClick}
-                  />
-                </Col>
-                <Col className="col-12">
-                  <h3>Lenses</h3>
-                  <EqAvatar
-                    equipment={this.state.lenses}
-                    handleHover={this.handleHover}
-                    handleClick={this.handleClick}
-                  />
-                </Col>
-                <Col className="col-12">
-                  <h3>Miscellaneous</h3>
-                  <EqAvatar
-                    equipment={this.state.misc}
-                    handleHover={this.handleHover}
-                    handleClick={this.handleClick}
-                  />
-                </Col>
-              </Row>
-            </Col>
-            <Col className="col-2">
-              <h5>Recently Added</h5>
-              <RecentItems
-                equipment={this.state.recentlyAdded}
-                handleHover={this.handleHover}
-              />
+            <Row id="rows-display" className="components">
+              <Col className="col-12">
+                <h3>Cameras</h3>
+                <EqAvatar
+                  equipment={this.state.cameras}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Col>
+              <Col className="col-12">
+                <h3>Lenses</h3>
+                <EqAvatar
+                  equipment={this.state.lenses}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Col>
+              <Col className="col-12">
+                <h3>Miscellaneous</h3>
+                <EqAvatar
+                  equipment={this.state.misc}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Col>
+            </Row>
+          </Col>
+          <Col className="col-2">
+            <h5>Recently Added</h5>
+            <RecentItems
+              equipment={this.state.recentlyAdded}
+              handleClick={this.handleClick}
+            />
 
-              <h5>Wishlist</h5>
-              <Wishlist
-                equipment={this.state.wishList}
-                handleClick={this.handleClick}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+            <h5>Wishlist</h5>
+            <Wishlist
+              equipment={this.state.wishList}
+              handleClick={this.handleClick}
+            />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
