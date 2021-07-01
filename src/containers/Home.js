@@ -82,6 +82,8 @@ class Home extends React.Component {
           misc: [newEquipment, ...this.state.misc],
         });
         break;
+        default:
+          console.log("error");
     }
   };
 
@@ -90,6 +92,7 @@ class Home extends React.Component {
       return (
         <img
           src="https://imgpile.com/images/NxoUB1.jpg"
+          alt="missing"
           className="img-banner"
         />
       );
@@ -97,12 +100,11 @@ class Home extends React.Component {
   }
 
   render() {
-    {
-    }
+
 
     return (
       <div className="home">
-        <Container className="container-fluid" className="corpus">
+        <Container /*className="container-fluid"*/ className="corpus">
           <Row>
             <Col className="col-2">
               <Form update={this.updateStateFromForm} />
@@ -149,7 +151,7 @@ class Home extends React.Component {
               <Wishlist
                 equipment={this.state.wishList}
                 handleClick={this.handleClick}
-                handleClick={this.handleClick}
+
               />
             </Col>
           </Row>

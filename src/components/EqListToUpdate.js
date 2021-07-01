@@ -1,6 +1,6 @@
 import React from "react";
 import "../EqGrid.css";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqGrid(props) {
@@ -10,9 +10,10 @@ function EqGrid(props) {
         <div key={item.id} className="">
           <img
             src={item.img_url}
-            className="eq-grid-img"
+            alt="missing"
+            className="eq-grid-img" 
             id={item.id}
-            className="eq-avatar"
+
             onMouseEnter={props.handleHover}
             onClick={props.handleClick}
           ></img>

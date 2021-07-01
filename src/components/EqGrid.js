@@ -1,6 +1,6 @@
 import React from "react";
 import "../EqGrid.css";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqGrid(props) {
@@ -9,7 +9,7 @@ function EqGrid(props) {
       <Col>
         <Col key={item.id} className="col-md-4">
           <Row>
-            <img src={item.img_url} className="img-medium"></img>
+            <img src={item.img_url} className="img-medium" alt="missing img"></img>
           </Row>
         </Col>
         <Col>

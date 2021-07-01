@@ -20,13 +20,13 @@ class BudgetContainer extends React.Component {
           (item) =>
             (purchasedSum =
               purchasedSum +
-              parseInt(item.purchasePrice) * parseInt(item.amount))
+              parseInt(item.purchasePrice, 10) * parseInt(item.amount,10))
         );
         equipment.map(
           (item) =>
             (marketValueSum =
               marketValueSum +
-              parseInt(item.marketPrice) * parseInt(item.amount))
+              parseInt(item.marketPrice,10) * parseInt(item.amount,10))
         );
 
         this.setState({
