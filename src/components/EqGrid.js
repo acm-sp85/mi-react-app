@@ -8,7 +8,7 @@ function EqGrid(props) {
       <Col>
         <Col key={item.id} className="col-md-4">
           <Row>
-            <img src={item.img_url} className="img-medium"></img>
+            <img src={item.img_url} className="img-medium" alt="error"></img>
           </Row>
         </Col>
         <Col>

@@ -23,12 +23,14 @@ function Budget(props) {
         <Col className="col-6">
           <img
             src="https://i.giphy.com/media/KDRv3QggAjyo/giphy.webp"
+            alt="error"
             className="img-gif"
           />
         </Col>
         <Col className="col-6">
           <img
             src="https://i.giphy.com/media/lptjRBxFKCJmFoibP3/giphy.webp"
+            alt="error"
             className="img-gif"
           />
         </Col>

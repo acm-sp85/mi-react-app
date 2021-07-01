@@ -8,6 +8,7 @@ function EqAvatar(props) {
         <div key={post.id} className="eq-avatar">
           <img
             src={post.img_url}
+            alt="error"
             id={post.id}
             className="eq-avatar"
             onMouseEnter={props.handleHover}

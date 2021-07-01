@@ -82,6 +82,8 @@ class Home extends React.Component {
           misc: [newEquipment, ...this.state.misc],
         });
         break;
+      default:
+        console.log("error");
     }
   };
 
@@ -90,6 +92,7 @@ class Home extends React.Component {
       return (
         <img
           src="https://imgpile.com/images/NxoUB1.jpg"
+          alt="error"
           className="img-banner"
         />
       );
@@ -97,18 +100,15 @@ class Home extends React.Component {
   }
 
   render() {
-    {
-    }
-
     return (
       <div className="home">
-        <Container className="container-fluid" className="">
+        <Container className="container-fluid">
           <Row>
             <Col className="col-2">
               <Form update={this.updateStateFromForm} />
             </Col>
             <Col className="col-8">
-              <Col className="col-12">{this.landingBanner()}</Col>
+              <Row className="col-12">{this.landingBanner()}</Row>
 
               <Row id="rows-display" className="components">
                 <Col className="col-12">
@@ -142,7 +142,6 @@ class Home extends React.Component {
               <RecentItems
                 equipment={this.state.recentlyAdded}
                 handleHover={this.handleHover}
-                handleClick={this.handleClick}
               />
 
               <h5>Wishlist</h5>

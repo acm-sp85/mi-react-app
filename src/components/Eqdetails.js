@@ -7,7 +7,12 @@ function EqDetails(props) {
     <Container>
       <Row>
         <Col>
-          <img src={item.img_url} className="eq-card-img" id={item.id}></img>
+          <img
+            src={item.img_url}
+            className="eq-card-img"
+            id={item.id}
+            alt="error"
+          ></img>
         </Col>
         <Col className="eq-details">
           <h2>
