@@ -82,31 +82,37 @@ class Home extends React.Component {
           misc: [newEquipment, ...this.state.misc],
         });
         break;
+        default:
+          console.log("error");
     }
   };
 
   landingBanner() {
     if (this.state.clickedItem.length === 0)
       return (
-        <div className="">
-          <img src="https://imgpile.com/images/NxoUB1.jpg" class="img-fluid" />
-        </div>
+        <img
+          src="https://imgpile.com/images/NxoUB1.jpg"
+          alt="missing"
+          className="img-banner"
+        />
       );
     return <EqDetails equipment={this.state.clickedItem} />;
   }
 
   render() {
-    {
-    }
+
 
     return (
-      <Container className="container-fluid" className="corpus">
-        <Row>
-          <Col className="col-2">
-            <Form update={this.updateStateFromForm} />
-          </Col>
-          <Col className="col-8">
-            <Col className="col-12">{this.landingBanner()}</Col>
+
+      <div className="home">
+        <Container /*className="container-fluid"*/ className="corpus">
+          <Row>
+            <Col className="col-2">
+              <Form update={this.updateStateFromForm} />
+            </Col>
+            <Col className="col-8">
+              <Col className="col-12">{this.landingBanner()}</Col>
+
 
             <Row id="rows-display" className="components">
               <Col className="col-12">
@@ -143,15 +149,18 @@ class Home extends React.Component {
               handleClick={this.handleClick}
             />
 
-            <h5>Wishlist</h5>
-            <Wishlist
-              equipment={this.state.wishList}
-              handleClick={this.handleClick}
-              handleClick={this.handleClick}
-            />
-          </Col>
-        </Row>
-      </Container>
+
+              <h5>Wishlist</h5>
+              <Wishlist
+                equipment={this.state.wishList}
+                handleClick={this.handleClick}
+
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
     );
   }
 }

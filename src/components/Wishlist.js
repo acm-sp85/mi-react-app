@@ -6,6 +6,7 @@ function Wishlist(props) {
       <div key={post.id} className="eq-grid">
         <img
           src={post.img_url}
+          alt="missing"
           id={post.id}
           className="eq-grid-img"
           onMouseEnter={props.handleHover}
