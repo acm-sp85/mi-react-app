@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Col, Row } from "react-bootstrap";
+import { Form, Button, Col, Row, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EqListToUpdate from "../components/EqListToUpdate";
 import FormToUpdate from "../components/FormToUpdate";
@@ -72,7 +72,7 @@ class UpdateItemContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Row>
           <Col>
             <Form onSubmit={this.handleSubmit} className="form">
@@ -102,7 +102,7 @@ class UpdateItemContainer extends React.Component {
             )}
           </Col>
         </Row>
-      </div>
+      </Container>
     );
   }
 }

@@ -19,7 +19,7 @@
 
 .column-of-avatars {
   max-height: 500px;
-  margin-right: 10px;
+  margin-right: 0px;
   border-style: inset;
   border: black;
 }
@@ -38,7 +38,6 @@
 
 .eq-avatar {
   max-height: 125px;
-  margin-right: 10px;
 }
 .eq-details {
 }

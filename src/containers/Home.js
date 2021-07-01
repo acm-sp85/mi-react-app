@@ -88,10 +88,9 @@ class Home extends React.Component {
   landingBanner() {
     if (this.state.clickedItem.length === 0)
       return (
-        <img
-          src="https://imgpile.com/images/NxoUB1.jpg"
-          className="img-banner"
-        />
+        <div className="">
+          <img src="https://imgpile.com/images/NxoUB1.jpg" class="img-fluid" />
+        </div>
       );
     return <EqDetails equipment={this.state.clickedItem} />;
   }
@@ -101,60 +100,58 @@ class Home extends React.Component {
     }
 
     return (
-      <div className="home">
-        <Container className="container-fluid" className="corpus">
-          <Row>
-            <Col className="col-2">
-              <Form update={this.updateStateFromForm} />
-            </Col>
-            <Col className="col-8">
-              <Col className="col-12">{this.landingBanner()}</Col>
+      <Container className="container-fluid" className="corpus">
+        <Row>
+          <Col className="col-2">
+            <Form update={this.updateStateFromForm} />
+          </Col>
+          <Col className="col-8">
+            <Col className="col-12">{this.landingBanner()}</Col>
 
-              <Row id="rows-display" className="components">
-                <Col className="col-12">
-                  <h3>Cameras</h3>
-                  <EqAvatar
-                    equipment={this.state.cameras}
-                    handleHover={this.handleHover}
-                    handleClick={this.handleClick}
-                  />
-                </Col>
-                <Col className="col-12">
-                  <h3>Lenses</h3>
-                  <EqAvatar
-                    equipment={this.state.lenses}
-                    handleHover={this.handleHover}
-                    handleClick={this.handleClick}
-                  />
-                </Col>
-                <Col className="col-12">
-                  <h3>Miscellaneous</h3>
-                  <EqAvatar
-                    equipment={this.state.misc}
-                    handleHover={this.handleHover}
-                    handleClick={this.handleClick}
-                  />
-                </Col>
-              </Row>
-            </Col>
-            <Col className="col-2">
-              <h5>Recently Added</h5>
-              <RecentItems
-                equipment={this.state.recentlyAdded}
-                handleHover={this.handleHover}
-                handleClick={this.handleClick}
-              />
+            <Row id="rows-display" className="components">
+              <Col className="col-12">
+                <h3>Cameras</h3>
+                <EqAvatar
+                  equipment={this.state.cameras}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Col>
+              <Col className="col-12">
+                <h3>Lenses</h3>
+                <EqAvatar
+                  equipment={this.state.lenses}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Col>
+              <Col className="col-12">
+                <h3>Miscellaneous</h3>
+                <EqAvatar
+                  equipment={this.state.misc}
+                  handleHover={this.handleHover}
+                  handleClick={this.handleClick}
+                />
+              </Col>
+            </Row>
+          </Col>
+          <Col className="col-2">
+            <h5>Recently Added</h5>
+            <RecentItems
+              equipment={this.state.recentlyAdded}
+              handleHover={this.handleHover}
+              handleClick={this.handleClick}
+            />
 
-              <h5>Wishlist</h5>
-              <Wishlist
-                equipment={this.state.wishList}
-                handleClick={this.handleClick}
-                handleClick={this.handleClick}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+            <h5>Wishlist</h5>
+            <Wishlist
+              equipment={this.state.wishList}
+              handleClick={this.handleClick}
+              handleClick={this.handleClick}
+            />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

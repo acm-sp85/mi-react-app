@@ -1,6 +1,6 @@
 import React from "react";
 import EqGrid from "../components/EqGrid";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class AllEquipmentContainer extends React.Component {
@@ -70,13 +70,12 @@ class AllEquipmentContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Form className="form">
           <Form.Label>Filter by Category:</Form.Label>
           <Form.Control
             as="select"
             name="filtered"
-            // value={this.state.filtered}
             onChange={this.handleChange}
             size="sm"
           >
@@ -87,7 +86,7 @@ class AllEquipmentContainer extends React.Component {
           </Form.Control>
         </Form>
         <EqGrid className="" equipment={this.state.filtered} />
-      </div>
+      </Container>
     );
   }
 }
