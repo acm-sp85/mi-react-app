@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqDetails(props) {
   const item = props.equipment;

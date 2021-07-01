@@ -1,7 +1,6 @@
 import React from "react";
 import EqGrid from "../components/EqGrid";
-import { Form, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Form } from "react-bootstrap";
 
 class AllEquipmentContainer extends React.Component {
   state = {

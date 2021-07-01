@@ -4,7 +4,7 @@ import RecentItems from "../components/Recent-items";
 import Wishlist from "../components/Wishlist";
 import Form from "../components/Form";
 import { Row, Col, Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import "../App.css";
 import EqDetails from "../components/Eqdetails";
 

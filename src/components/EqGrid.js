@@ -1,7 +1,6 @@
 import React from "react";
 import "../EqGrid.css";
-import { Row, Col, Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Row, Col } from "react-bootstrap";
 
 function EqGrid(props) {
   const allEq = props.equipment.map((item) => {

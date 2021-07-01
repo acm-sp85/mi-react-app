@@ -1,6 +1,5 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 
 function EqAvatar(props) {
   const avatar = props.equipment.map((post) => {
