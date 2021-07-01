@@ -102,7 +102,7 @@ class Home extends React.Component {
 
     return (
       <div className="home">
-        <Container className="container-fluid" className="corpus">
+        <Container className="container-fluid" className="">
           <Row>
             <Col className="col-2">
               <Form update={this.updateStateFromForm} />
@@ -148,7 +148,6 @@ class Home extends React.Component {
               <h5>Wishlist</h5>
               <Wishlist
                 equipment={this.state.wishList}
-                handleClick={this.handleClick}
                 handleClick={this.handleClick}
               />
             </Col>

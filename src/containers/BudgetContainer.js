@@ -1,5 +1,6 @@
 import React from "react";
 import Budget from "../components/Budget";
+import { Container } from "react-bootstrap";
 
 class BudgetContainer extends React.Component {
   state = {
@@ -39,12 +40,12 @@ class BudgetContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Budget
           purchasedSum={this.state.purchasedSum}
           marketValueSum={this.state.marketValueSum}
         />
-      </div>
+      </Container>
     );
   }
 }
