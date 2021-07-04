@@ -86,9 +86,6 @@ class UpdateItemContainer extends React.Component {
           results: alreadyDeleted,
           equipment: updatedEqList,
         });
-
-        /*this.setState({
-          results:  results - deleted one */
       });
   };
 
