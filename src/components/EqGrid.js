@@ -13,6 +13,11 @@ function EqGrid(props) {
         </Col>
         <Col>
           <Row>
+            <h2>
+              {item.brand}-{item.name}
+            </h2>
+          </Row>
+          <Row>
             <p>{item.type} </p>
           </Row>
           <Row>
@@ -28,11 +33,6 @@ function EqGrid(props) {
           </Row>
           <Row>
             <p>Notes : {item.notes}</p>
-          </Row>
-          <Row>
-            <h2>
-              {item.brand}-{item.name}
-            </h2>
           </Row>
         </Col>
       </Col>

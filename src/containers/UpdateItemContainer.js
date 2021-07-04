@@ -31,8 +31,7 @@ class UpdateItemContainer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const toSearch = this.state.search;
-
+    const toSearch = this.state.search.toLowerCase();
     const foundItems = this.state.equipment.filter(
       (item) =>
         item.name.toLowerCase().includes(toSearch) ||

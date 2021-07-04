@@ -1,7 +1,23 @@
 {
   "equipment": [
     {
-      "id": "2565h",
+      "name": "5D iv",
+      "brand": "Canon",
+      "type": "camera",
+      "medium": "digital",
+      "category": [
+        "photography"
+      ],
+      "amount": 1,
+      "purchasePrice": 4000,
+      "marketPrice": "1500",
+      "img_url": "https://static.bhphoto.com/images/images500x500/canon_eos_5d_mark_iv_1561852319_1274705.jpg",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "1dgh6"
+    },
+    {
       "name": "A7 iii",
       "brand": "Sony",
       "type": "camera",
@@ -11,13 +27,12 @@
       ],
       "amount": 1,
       "purchasePrice": 2000,
-      "marketPrice": 0,
+      "marketPrice": "1500",
       "img_url": "https://static.bhphoto.com/images/images500x500/sony_ilce_7m3_alpha_a7_iii_mirrorless_1519677934_1394217.jpg",
-      "serial_number": "",
-      "notes": ""
+      "notes": "",
+      "id": "2565h"
     },
     {
-      "id": "3rhgy4",
       "name": "m6",
       "brand": "Leica",
       "type": "camera",
@@ -27,10 +42,10 @@
       ],
       "amount": 1,
       "purchasePrice": 1600,
-      "marketPrice": 0,
-      "img_url": "https://static.bhphoto.com/images/images500x500/leica_10370_m_a_rangefinder_camera_body_1490099761_1082912.jpg",
-      "serial_number": "",
-      "notes": ""
+      "marketPrice": "2500",
+      "img_url": "https://i.ebayimg.com/images/g/MyMAAOSwnGpg1SHh/s-l1600.jpg",
+      "notes": "",
+      "id": "3rhgy4"
     },
     {
       "name": "M240",
@@ -42,7 +57,7 @@
       ],
       "amount": 1,
       "purchasePrice": 2400,
-      "marketPrice": 0,
+      "marketPrice": "2400",
       "img_url": "https://static.bhphoto.com/images/images500x500/leica_10770a_m_digital_rangefinder_camera_1408448718_1064509.jpg",
       "notes": "",
       "favorite": false,
@@ -62,6 +77,22 @@
       "serialNumber": "",
       "notes": "Came with external flash.",
       "id": "oNU5rcd"
+    },
+    {
+      "name": "EOS-3",
+      "brand": "Canon",
+      "type": "camera",
+      "medium": "analog",
+      "category": "photography",
+      "amount": "1",
+      "purchasePrice": "125",
+      "marketPrice": "450",
+      "img_url": "https://www.keh.com/media/catalog/product/cache/2ebdbedaccdf4a424bbc6b73229cdac6/2/1/212066-2733221_01.jpg",
+      "serialNumber": "",
+      "notes": "Bought at The ICP. Body has heavy signs of use.",
+      "favorite": false,
+      "wishList": false,
+      "id": "ISUknUn"
     },
     {
       "name": "Dry Case",
@@ -87,7 +118,7 @@
       "category": "",
       "amount": "1",
       "purchasePrice": "150",
-      "marketPrice": "125",
+      "marketPrice": "30",
       "img_url": "https://static.bhphoto.com/images/images500x500/mefoto_rtsablk_roadtrip_s_aluminum_travel_1535539612_1431949.jpg",
       "serialNumber": "",
       "notes": "",
@@ -135,7 +166,7 @@
       "category": "",
       "amount": "1",
       "purchasePrice": "50",
-      "marketPrice": "225",
+      "marketPrice": "100",
       "img_url": "https://static.bhphoto.com/images/multiple_images/images500x500/1533550530_IMG_1040768.jpg",
       "serialNumber": "",
       "notes": "",
@@ -151,7 +182,7 @@
       "category": "",
       "amount": 0,
       "purchasePrice": "200",
-      "marketPrice": "189",
+      "marketPrice": "70",
       "img_url": "https://static.bhphoto.com/images/images500x500/ona_ona5_014olv_bowery_camera_bag_olive_1555496426_1474767.jpg",
       "serialNumber": "",
       "notes": "It is cute.",
@@ -160,20 +191,36 @@
       "id": "ar8aMJ7"
     },
     {
-      "name": "50mm f/1.4 - update",
+      "name": "50mm f/1.4",
       "brand": "Canon",
       "type": "lens",
       "medium": "",
       "category": "",
       "amount": "1",
-      "purchasePrice": "301",
-      "marketPrice": "399",
+      "purchasePrice": "300",
+      "marketPrice": "150",
       "img_url": "https://static.bhphoto.com/images/images500x500/Canon_2515A003_50mm_f_1_4_USM_Autofocus_1266238928_12140.jpg",
       "serialNumber": "",
       "notes": "",
       "favorite": false,
       "wishList": false,
       "id": "Lm92H4c"
+    },
+    {
+      "name": "100mm macro f/2.8",
+      "brand": "Canon",
+      "type": "lens",
+      "medium": "",
+      "category": "",
+      "amount": "1",
+      "purchasePrice": "250",
+      "marketPrice": "300",
+      "img_url": "https://static.bhphoto.com/images/images500x500/Canon_4657A006_100mm_f_2_8_USM_Macro_1266926529_194451.jpg",
+      "serialNumber": "",
+      "notes": "",
+      "favorite": false,
+      "wishList": false,
+      "id": "Rg-nq_N"
     },
     {
       "name": "C-Stand",
@@ -214,7 +261,7 @@
       "medium": "analog",
       "category": "photography",
       "amount": "1",
-      "purchasePrice": 0,
+      "purchasePrice": "1000",
       "marketPrice": "1141",
       "img_url": "https://www.adorama.com/images/Large/zi352bs.jpg",
       "serialNumber": "",
@@ -263,7 +310,7 @@
       "category": "",
       "amount": "1",
       "purchasePrice": "250",
-      "marketPrice": "250",
+      "marketPrice": "70",
       "img_url": "https://static.bhphoto.com/images/multiple_images/images500x500/1473120278_IMG_663422.jpg",
       "serialNumber": "",
       "notes": "",
