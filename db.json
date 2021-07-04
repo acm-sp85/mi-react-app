@@ -48,23 +48,6 @@
       "id": "3rhgy4"
     },
     {
-      "name": "M240",
-      "brand": "Leica",
-      "type": "camera",
-      "medium": "digital",
-      "category": [
-        "photography"
-      ],
-      "amount": 1,
-      "purchasePrice": 2400,
-      "marketPrice": "2400",
-      "img_url": "https://static.bhphoto.com/images/images500x500/leica_10770a_m_digital_rangefinder_camera_1408448718_1064509.jpg",
-      "notes": "",
-      "favorite": false,
-      "wishList": false,
-      "id": "4564u567j"
-    },
-    {
       "name": "XA-2",
       "brand": "Olympus",
       "type": "camera",

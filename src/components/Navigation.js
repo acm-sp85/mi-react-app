@@ -5,7 +5,7 @@ function Navigation() {
   return (
     <div>
       <Navbar expand="lg" className="navbar">
-        <Navbar.Brand href="/">My Equipment List</Navbar.Brand>
+        <Navbar.Brand href="/">Your Camera Gear</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
