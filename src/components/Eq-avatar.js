@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqAvatar(props) {
   const avatar = props.equipment.map((post) => {
@@ -9,7 +8,7 @@ function EqAvatar(props) {
         <div key={post.id} className="eq-avatar">
           <img
             src={post.img_url}
-            alt="missing"
+            alt="error"
             id={post.id}
             className="eq-avatar"
             onMouseEnter={props.handleHover}

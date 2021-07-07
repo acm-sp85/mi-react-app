@@ -1,5 +1,6 @@
 import React from "react";
 import Budget from "../components/Budget";
+import { Container } from "react-bootstrap";
 
 class BudgetContainer extends React.Component {
   state = {
@@ -20,13 +21,13 @@ class BudgetContainer extends React.Component {
           (item) =>
             (purchasedSum =
               purchasedSum +
-              parseInt(item.purchasePrice, 10) * parseInt(item.amount,10))
+              parseInt(item.purchasePrice, 10) * parseInt(item.amount, 10))
         );
         equipment.map(
           (item) =>
             (marketValueSum =
               marketValueSum +
-              parseInt(item.marketPrice,10) * parseInt(item.amount,10))
+              parseInt(item.marketPrice, 10) * parseInt(item.amount, 10))
         );
 
         this.setState({
@@ -39,12 +40,12 @@ class BudgetContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Budget
           purchasedSum={this.state.purchasedSum}
           marketValueSum={this.state.marketValueSum}
         />
-      </div>
+      </Container>
     );
   }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqDetails(props) {
   const item = props.equipment;
@@ -8,7 +7,12 @@ function EqDetails(props) {
     <Container>
       <Row>
         <Col>
-          <img src={item.img_url} className="eq-card-img" id={item.id} alt="missing"></img>
+          <img
+            src={item.img_url}
+            className="eq-card-img"
+            id={item.id}
+            alt="error"
+          ></img>
         </Col>
         <Col className="eq-details">
           <h2>

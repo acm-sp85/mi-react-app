@@ -1,10 +1,27 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class FormSubmit extends Component {
-  state = {};
+  state = {
+    name: "",
+    brand: "",
+    type: "",
+    medium: "",
+    category: "",
+    amount: 0,
+    purchasePrice: 0,
+    marketPrice: 0,
+    img_url: "",
+    serialNumber: "",
+    notes: "",
+    favorite: false,
+    wishList: false,
+  };
   componentDidMount() {
+    this.mountingComponent();
+  }
+
+  mountingComponent = () => {
     const {
       name,
       brand,
@@ -35,7 +52,7 @@ export default class FormSubmit extends Component {
       favorite: favorite,
       wishList: wishList,
     });
-  }
+  };
   handleChange = (event) => {
     event.preventDefault();
     const target = event.target;
@@ -51,7 +68,7 @@ export default class FormSubmit extends Component {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state),
-    });
+    }).then(this.mountingComponent());
   };
 
   render() {
@@ -180,7 +197,7 @@ export default class FormSubmit extends Component {
             size="sm"
           />
         </Form.Group>
-        <Button type="submit">ADD</Button>
+        <Button type="submit">UPDATE</Button>
       </Form>
     );
   }

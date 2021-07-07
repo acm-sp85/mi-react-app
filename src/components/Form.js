@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class FormSubmit extends Component {
   state = {

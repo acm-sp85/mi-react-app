@@ -1,7 +1,6 @@
 import React from "react";
 import "../EqGrid.css";
 import { Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function EqGrid(props) {
   const allEq = props.equipment.map((item) => {
@@ -9,7 +8,7 @@ function EqGrid(props) {
       <Col>
         <Col key={item.id} className="col-md-4">
           <Row>
-            <img src={item.img_url} className="img-medium" alt="missing img"></img>
+            <img src={item.img_url} className="img-medium" alt="error"></img>
           </Row>
         </Col>
         <Col>
